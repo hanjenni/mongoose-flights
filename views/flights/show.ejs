@@ -1,6 +1,7 @@
 <!-- <h2>Destination</h2>
 	<form action="/flights/" method="POST"> -->
 	
+<!-- Where the previous info lies  -->
 
 <section id="show-page">
     <div>Airline: </div>
@@ -16,19 +17,21 @@
 
 </section>
           
+<!-- where the destination submit box is  -->
 
 <br><br><h2>Destinations</h2>
-<form id="add-flight-form" method="POST"
+<form id="add-flight-info" method="POST"
   action="/flights/<%= flight._id %>/destinations">
-   
-  <label>Destination:</label>
-  <textarea name="content"></textarea>
 
+  <label>Airport:
+    <div><%= flight.destination %> </div>
+  </label>
   
 
   <input type="submit" value="Add Destination">
 </form>
 
+<!-- where the destination information will be posted -->
 
 
 
