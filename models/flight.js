@@ -1,5 +1,9 @@
 const mongoose = require('mongoose')
 
+const destinationSchema = new mongoose.Schema({
+    airport: String,
+    arrival: Date
+});
 
 
 const flightSchema = new mongoose.Schema({
@@ -7,6 +11,9 @@ const flightSchema = new mongoose.Schema({
     airport: String,
     flightNo: Number,
     departs: Date,
+    arrival: Date,
+    destinations: [destinationSchema]
+     
    
 });
 
