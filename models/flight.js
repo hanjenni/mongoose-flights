@@ -5,7 +5,10 @@ const destinationSchema = new mongoose.Schema({
         type: String, 
         enum: ['ATL', 'DFW', 'DEN', 'LAX', 'SAN'],
         default: 'DEN'},       
-    arrival: Date
+    arrival: {
+        type: Date,
+        default: Date.now()
+    }  
 });
 
 

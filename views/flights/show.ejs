@@ -12,8 +12,7 @@
     <div><%= flight.flightNo %></div>
     <div>Departs: </div>
     <div><%= flight.departs %></div>
-    <div>Destination: </div>
-    <div><%= flight.destinations %></div>
+  
 
 </section>
           
@@ -24,8 +23,18 @@
   action="/flights/<%= flight._id %>/destinations">
 
   <label>Airport:
-    <div><%= flight.destination %> </div>
+    <select name="airport">
+      <option value="ATL">ATL</option>
+      <option value="DFW">DFW</option>
+      <option value="DEN" selected>DEN</option>
+      <option value="LAX">LAX</option>
+              <option value="SAN">SAN</option>
+    </select>
   </label>
+
+  <label>Arrival:
+    <input type="datetime-local" name="arrivals">
+ </label><br>
   
 
   <input type="submit" value="Add Destination">
