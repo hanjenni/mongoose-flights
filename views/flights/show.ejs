@@ -1,5 +1,5 @@
 <!-- <h2>Destination</h2>
-	<form action="/flights" method="POST"> -->
+	<form action="/flights/" method="POST"> -->
 	
 
 <section id="show-page">
@@ -20,8 +20,11 @@
           
 
 <br><br><h2>Destinations</h2>
-<form id="add-destination-form" method="POST"
+<form id="add-flight-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
+   
+
+
   <label>Destination:</label>
   <textarea name="content"></textarea>
 
@@ -41,7 +44,6 @@
     <tbody>
       <% flight.destinations.forEach(function(d) { %>
         <tr>
-          <td><%= d.createdAt.toLocaleDateString() %></td>
           <td><%= d.destinations %></td>
 
       <% }); %>
