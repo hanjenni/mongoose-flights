@@ -1,5 +1,4 @@
-<!-- <h2>Destination</h2>
-	<form action="/flights/" method="POST"> -->
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -13,16 +12,24 @@
 <!-- Where the previous info lies  -->
 
 <section id="show-page">
-    <div>Airline: </div>
-    <div><%= flight.airline %></div>
-    <div>Airport: </div>
-    <div><%= flight.airport %></div>
-    <div>Flight Number: </div>
-    <div><%= flight.flightNo %></div>
-    <div>Departs: </div>
-    <div><%= flight.departs %></div>
-  
-
+  <table id="show-table">
+    <tr class="top-table">
+      <th>Airline: </th>
+      <td><%= flight.airline %></td>
+    </tr>
+    <tr class="top-table">
+      <th>Airport: </th>
+      <td><%= flight.airport %></td>
+    </tr>
+    <tr class="top-table">
+      <th>Flight Number: </th>
+      <td><%= flight.flightNo %></td>
+    </tr>
+    <tr class="top-table">
+      <th>Departs: </th>
+      <td><%= flight.departs %></td>
+    </tr>
+  </table>
 </section>
           
 <!-- where the destination submit box is  -->
