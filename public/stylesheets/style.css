@@ -4,6 +4,10 @@
   color: #424748;
 }
 
+a {
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 50px;
@@ -11,21 +15,28 @@ body {
   flex-direction: column;
   grid-template-rows: 50px 1fr;
   background-color: rgb(227, 223, 223);
-}
-
-a {
-  color: #00B7FF;
+  justify-items: center;
+  
 }
 
 #show-page {
  display: flex;
  flex-direction: row;
+ border: 1px solid black;
 }
 
-#show-table {
-  border: 1px solid black;
+nav {
+  background-color: rgb(112, 112, 112);
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  color: white;
 }
 
+#details {
+  color: #424748;
+  font-weight: bold;
+}
 
 
 
