@@ -10,7 +10,7 @@ const flightSchema = new mongoose.Schema({
     airline: String,
     airport: String,
     flightNo: Number,
-    departs: Date,
+    departs: { type: Date, default: Date.now },
     destinations: [destinationSchema]
      
    

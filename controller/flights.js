@@ -9,6 +9,7 @@ module.exports = {
 
 function show(req, res) {
 	Flight.findById(req.params.id, function(err, flight) {
+		console.log(flight)
 		res.render('flights/show.ejs', {flight});
 	})
 }
@@ -26,7 +27,6 @@ function create(req, res){
 			console.log(err, ' <- err in the flights create controller')
 			return res.render('flights/new.ejs')
 		}
-
 		console.log(flightDoc)
 		res.redirect('/flights')
 	})
