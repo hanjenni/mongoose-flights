@@ -29,7 +29,8 @@
           <td><%= f.flightNo %></td>
           <td><%= f.departs %></td>
           <td><a href="/flights/<%= f._id %>" id="details">DETAILS</a></td>
-		<% }) %>
+          <td><a id="tickets" href="/flights/<%= f._id %>/tickets/new"> Buy Tickets</a>
+          <% }) %>
   
     </tbody>
   </table>

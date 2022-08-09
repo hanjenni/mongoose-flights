@@ -16,7 +16,8 @@ const flightSchema = new mongoose.Schema({
     departs: 
         { type: Date, 
             default: () => Date.now() + 7*24*60*60*1000},
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
+    flight: [{type: mongoose.Schema.Types.ObjectId, ref: 'Flight'}]
      
    
 });
