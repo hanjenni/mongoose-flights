@@ -33,9 +33,10 @@ nav {
   color: white;
 }
 
-#details {
+#details, #tickets {
   color: #424748;
   font-weight: bold;
+  
 }
 
 table thead th {

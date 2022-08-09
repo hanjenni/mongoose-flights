@@ -34,9 +34,6 @@ function create(req, res){
 		console.log(flightDoc)
 		res.redirect('/flights')
 	})
-
-	
-
 	
 }
 
