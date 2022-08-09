@@ -83,14 +83,26 @@
 <% } else { %>
   <h5>No Destinations Yet</h5>
 <% } %>
-
-    <tbody>
-      <% tickets.forEach(function(t) { %>
-        <tr>
-          
-          <td><%= t.seat %></td>
-          <td><%= t.price %></td>
-        </tr>
-      <% }); %>
-    </tbody>
+<br>
+<br>
+<!--New Ticket-->
+<h2>Ticket</h2>
+<table>
+<thead>
+  <tr>
+    
+    <th>Seat Number</th>
+    <th>Price</th>
+  </tr>
+</thead>
+<tbody>
+  <% tickets.forEach(function(t) { %>
+    <tr>
+      
+      <td><%= t.seat %></td>
+      <td><%= t.price %></td>
+    </tr>
+  <% }); %>
+</tbody>
+</table>
   </body></html>

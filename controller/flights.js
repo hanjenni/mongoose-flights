@@ -35,12 +35,7 @@ function create(req, res){
 		res.redirect('/flights')
 	})
 
-	flight.save(function(err) {
-		if (err) return res.redirect('/flights/new');
-		
-		res.redirect(`/flights/${flight._id}`);
-	  });
-	  
+	
 
 	
 }
@@ -55,7 +50,6 @@ function index(req, res){
 });
     
 }
-
 
 
 
