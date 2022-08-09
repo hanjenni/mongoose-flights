@@ -8,6 +8,8 @@ module.exports = {
 	show,
 }
 
+//read a specific post
+
 function show(req, res) {
 	Flight.findById(req.params.id, function(err, flight) {
 		Ticket.find({flight: flight._id}, function(err, tickets){
@@ -18,10 +20,17 @@ function show(req, res) {
 	})
 }
 
-function newFlight(req, res){
-	res.render('flights/new.ejs')
+//List out the flights
+function index(req, res){
+    Flight.find({},function(err, allFlights){
+    console.log(allFlights)    
+    res.render('flights/index.ejs',{
+        flights: allFlights
+    });
+});
+    
 }
-
+//create a new post
 function create(req, res){
 	// log out what the function needs
 	console.log(req.body)
@@ -36,19 +45,11 @@ function create(req, res){
 	})
 	
 }
+//return view(form) to add a new post
+function newFlight(req, res){
+	res.render('flights/new.ejs')
 
-function index(req, res){
-    //List out the flights
-    Flight.find({},function(err, allFlights){
-    console.log(allFlights)    
-    res.render('flights/index.ejs',{
-        flights: allFlights
-    });
-});
-    
 }
-
-
 
 
 

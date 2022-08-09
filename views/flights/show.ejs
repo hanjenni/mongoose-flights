@@ -10,7 +10,9 @@
       <title>Mongoose Flight Lab</title>
     </head>
     <body>	
+
 <!-- Where the previous info lies  -->
+
 <br><br><h2>Flight Details</h2>
 <section id="show-page">
   <table id="show-table">
@@ -32,8 +34,6 @@
     </tr>
   </table>
 </section>
-
-
           
 <!-- where the destination submit box is  -->
 
@@ -55,7 +55,6 @@
     <input type="datetime-local" name="arrival">
  </label><br>
   
-
   <input type="submit" value="Add Destination">
 </form>
 
@@ -65,7 +64,6 @@
   <table>
     <thead>
       <tr>
-        
         <th>Airport</th>
         <th>Arrival</th>
       </tr>
@@ -73,7 +71,6 @@
     <tbody>
       <% flight.destinations.forEach(function(f) { %>
         <tr>
-          
           <td><%= f.airport %></td>
           <td><%= f.arrival %></td>
         </tr>
@@ -85,20 +82,23 @@
 <% } %>
 <br>
 <br>
+
 <!--New Ticket-->
+<form id="add-ticket-info" method="POST"
+  action="/flights/<%= flight._id %>/tickets/new">
+  
 <h2>Ticket</h2>
 <table>
 <thead>
   <tr>
-    
     <th>Seat Number</th>
     <th>Price</th>
   </tr>
 </thead>
 <tbody>
+
   <% tickets.forEach(function(t) { %>
-    <tr>
-      
+  <tr>
       <td><%= t.seat %></td>
       <td><%= t.price %></td>
     </tr>
