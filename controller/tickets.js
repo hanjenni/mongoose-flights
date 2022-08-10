@@ -12,19 +12,6 @@ module.exports = {
 }
 
 
-
-
-// function create(req,res) {
-//     console.log(create, '<-new ticket button')
-//     req.body.flight = req.params.id
-//     const ticket = new Ticket(req.body);
-//     ticket.save(function (err) {
-//         if (err) return res.render('tickets/new.ejs');
-//         res.redirect(`/flights/${ticket.flight}`);
-
-
-// });
-
 function create(req, res){
     req.body.flight = req.params.id
     console.log(create, '<-new ticket button')
@@ -36,11 +23,6 @@ function create(req, res){
         res.redirect(`/flights/${req.params.id}`)
     });
 };
-
-
-
-
-
 
    
 function newTicket(req, res) {
